@@ -18,8 +18,6 @@ public class Iphone extends Electronico {
         return modelo;
     }
 
-
-
     @Override
     public double getPrecioVenta() {
         return this.getPrecio();

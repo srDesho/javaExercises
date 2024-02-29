@@ -14,21 +14,21 @@ public class Tigre extends Felino{
 
     @Override
     public String comer() {
-        return null;
+        return "El Tigre de especie: " + getEspecieTigre() + " caza con sus garras de tamaño de " + getTamanaioGarras() + "cm";
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El tigre " + getNombreCientifico() + " duerme muchas horas.";
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El tigre de " + getPeso() + "kg de peso corre a una velocidad de + " + getVelocidad() + "km/h.";
     }
 
     @Override
     public String comunirse() {
-        return null;
+        return "El tigre ruge fuerte para asustar a sus enemigos.";
     }
 }

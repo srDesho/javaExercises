@@ -14,21 +14,21 @@ public class Perro extends Canino{
 
     @Override
     public String comer() {
-        return null;
+        return "El perro caza con sus colmillos de tamaño " + getTamanioColmillos() + "' con una fuerza de " + getFuerzaMordida() + "PSI";
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El perro de nombre científico " + getNombreCientifico() + " duerme en su habitat " + getHabitat();
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El perro de color " + getColor() + " duerme solo.";
     }
 
     @Override
     public String comunirse() {
-        return null;
+        return "El perro de nombre: " + getNombreCientifico() + " tiene una altura de " + getAltura() + "cm y se comunica aullando.";
     }
 }

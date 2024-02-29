@@ -20,21 +20,21 @@ public class Leon extends Felino{
 
     @Override
     public String comer() {
-        return null;
+        return "El León caza junto a su grupo de " + numManada + " individuos en las llanuras africanas";
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El león duerme muchas horas.";
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El león corre a una velocidad de " + this.getVelocidad() + " km/h";
     }
 
     @Override
     public String comunirse() {
-        return null;
+        return "El león ruge para comunicarse, su potencia de rugido en decibelios es de: " + this.potenciaRugidoDecibel;
     }
 }

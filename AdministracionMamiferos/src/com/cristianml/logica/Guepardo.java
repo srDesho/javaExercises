@@ -13,16 +13,16 @@ public class Guepardo extends Felino{
 
     @Override
     public String dormir() {
-        return null;
+        return "El Guepardo caza a su presa a una velocidad de " + getVelocidad() + " km/h";
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El Guepardo corre a una velocidad de " + getVelocidad() + " km/h";
     }
 
     @Override
     public String comunirse() {
-        return null;
+        return "El perro de nombre: " + getNombreCientifico() + " tiene una altura de " + getAltura() + "cm y se comunica Rugiendo fuerte ante la presa.";
     }
 }

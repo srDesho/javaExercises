@@ -20,21 +20,21 @@ public class Lobo extends Canino{
 
     @Override
     public String comer() {
-        return null;
+        return "El lobo caza junto a su grupo de " + numCamada + " individuos en la selva.";
     }
 
     @Override
     public String dormir() {
-        return null;
+        return "El Lobo " + color + " duerme en las cavernas de " + habitat;
     }
 
     @Override
     public String correr() {
-        return null;
+        return "El lobo caza junto a su grupo de " + numCamada + "individuos.";
     }
 
     @Override
     public String comunirse() {
-        return null;
+        return "El lobo de la especie " + this.especieLobo + " se comunica con aullidos agudos.";
     }
 }

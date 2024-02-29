@@ -34,7 +34,7 @@ public class Lobo extends Canino{
     }
 
     @Override
-    public String comunirse() {
+    public String comunicarse() {
         return "El lobo de la especie " + this.especieLobo + " se comunica con aullidos agudos.";
     }
 }

@@ -34,7 +34,7 @@ public class Leon extends Felino{
     }
 
     @Override
-    public String comunirse() {
+    public String comunicarse() {
         return "El león ruge para comunicarse, su potencia de rugido en decibelios es de: " + this.potenciaRugidoDecibel;
     }
 }

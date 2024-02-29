@@ -38,5 +38,5 @@ abstract public class Mamifero {
     abstract public String comer();
     abstract public String dormir();
     abstract public String correr();
-    abstract public String comunirse();
+    abstract public String comunicarse();
 }

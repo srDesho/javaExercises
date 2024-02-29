@@ -28,7 +28,7 @@ public class Perro extends Canino{
     }
 
     @Override
-    public String comunirse() {
+    public String comunicarse() {
         return "El perro de nombre: " + getNombreCientifico() + " tiene una altura de " + getAltura() + "cm y se comunica aullando.";
     }
 }

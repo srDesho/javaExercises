@@ -28,7 +28,7 @@ public class Tigre extends Felino{
     }
 
     @Override
-    public String comunirse() {
+    public String comunicarse() {
         return "El tigre ruge fuerte para asustar a sus enemigos.";
     }
 }

@@ -3,12 +3,12 @@ package com.cristianml.logica;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Curriculo extends Hoja{
-    private String persona;
+public class Curriculo extends Hoja implements Imprimible{
+    private Persona persona;
     private String carrera;
     private List<String> experiencias;
 
-    public Curriculo(String contenido, String persona, String carrera, String experiencia) {
+    public Curriculo(String contenido, Persona persona, String carrera) {
         super(contenido);
         this.persona = persona;
         this.carrera = carrera;
@@ -22,9 +22,9 @@ public class Curriculo extends Hoja{
     }
 
     @Override
-    public String Imprimir() {
+    public String imprimir() {
         // Creamos un StringBuilder para concatenar las experciencias
-        StringBuilder sb = new StringBuilder("Nombre: ").append(persona).append("\n")
+        StringBuilder sb = new StringBuilder("Nombre: ").append(persona.toString()).append("\n")
                 .append("Resumen: ").append(this.contenido).append("\n").append("Profesión: ")
                 .append(carrera).append("\n").append("Experiencias: \n");
         for (String exp : this.experiencias) {

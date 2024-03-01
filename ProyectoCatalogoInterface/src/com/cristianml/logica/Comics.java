@@ -10,6 +10,10 @@ public class Comics extends Libro implements IProducto{
         this.personaje = perso;
     }
 
+    public String getPersonaje() {
+        return personaje;
+    }
+
     @Override
     public double getPrecioVenta() {
         return super.getPrecioVenta();

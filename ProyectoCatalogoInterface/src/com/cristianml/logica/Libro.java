@@ -18,22 +18,22 @@ public class Libro extends Producto implements ILibro{
 
     @Override
     public Date getFechaPublicacion() {
-        return null;
+        return this.fechaPublicacion;
     }
 
     @Override
     public String getAutor() {
-        return null;
+        return this.autor;
     }
 
     @Override
     public String getTitulo() {
-        return null;
+        return this.titulo;
     }
 
     @Override
     public String getEditorial() {
-        return null;
+        return this.editorial;
     }
 
     @Override

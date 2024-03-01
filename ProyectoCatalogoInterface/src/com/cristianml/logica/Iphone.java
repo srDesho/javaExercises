@@ -4,8 +4,8 @@ public class Iphone extends Electronico implements IProducto{
     private String color;
     private String modelo;
 
-    public Iphone(String fabricante, String color, String modelo) {
-        super(fabricante);
+    public Iphone(int precio, String fabricante, String color, String modelo) {
+        super(precio, fabricante);
         this.color = color;
         this.modelo = modelo;
     }
@@ -20,7 +20,7 @@ public class Iphone extends Electronico implements IProducto{
 
     @Override
     public int getPrecio() {
-        return this.getPrecio();
+        return this.precio;
     }
 
     @Override

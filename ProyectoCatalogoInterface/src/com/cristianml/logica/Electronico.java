@@ -1,9 +1,10 @@
 package com.cristianml.logica;
 
-abstract public class Electronico implements IElectronico{
+abstract public class Electronico extends Producto implements IElectronico{
     protected String fabricante;
 
-    public Electronico(String fabricante) {
+    public Electronico(int precio, String fabricante) {
+        super(precio);
         this.fabricante = fabricante;
     }
 

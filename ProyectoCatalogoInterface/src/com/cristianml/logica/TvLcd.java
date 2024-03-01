@@ -3,8 +3,8 @@ package com.cristianml.logica;
 public class TvLcd extends Electronico implements IProducto{
     private int pulgada;
 
-    public TvLcd(String fabricante, int pulgada) {
-        super(fabricante);
+    public TvLcd(int precio, String fabricante, int pulgada) {
+        super(precio, fabricante);
         this.pulgada = pulgada;
     }
 
@@ -14,7 +14,7 @@ public class TvLcd extends Electronico implements IProducto{
 
     @Override
     public int getPrecio() {
-        return this.getPrecio();
+        return this.precio;
     }
 
     @Override

@@ -6,12 +6,13 @@ public class Cliente {
     private Integer id;
     private String nombre;
     private String apellido;
-    private static Integer ultimoId;
+    private static int ultimoId;
 
     public Cliente() {
-        this.ultimoId = ++ultimoId;
+        this.id = ++ultimoId;
     }
     public Cliente(String nombre, String apellido) {
+        this();
         this.nombre = nombre;
         this.apellido = apellido;
     }

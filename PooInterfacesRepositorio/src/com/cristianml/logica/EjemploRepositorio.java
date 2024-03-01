@@ -39,5 +39,7 @@ public class EjemploRepositorio {
         System.out.println("==========================ELIMINAR=============================");
         repo.eliminar(3);
         repo.listar().forEach(System.out::println);
+
+
     }
 }

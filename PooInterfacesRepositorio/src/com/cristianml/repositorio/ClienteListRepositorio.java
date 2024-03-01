@@ -50,30 +50,15 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
     @Override
     // Listar ordenando segun al argumento recibido en la variable campo y si la direccion es asc o desc
     public List<Cliente> listar(String campo, Direccion dir) {
-        dataSourcce.sort(new Comparator<Cliente>() {
-            @Override
-            public int compare(Cliente a, Cliente b) {
+        List<Cliente> listaOrdenada = new ArrayList<>(this.dataSourcce);
+        listaOrdenada.sort((Cliente a, Cliente b) ->{
                 int resultado = 0;
                 if (dir == Direccion.ASC) {
-                    switch (campo) {
-                        case "id" ->
-                            resultado = a.getId().compareTo(b.getId());
-                        case "nombre" ->
-                            resultado = a.getNombre().compareTo(b.getNombre());
-                        case "apellido" -> a.getApellido().compareTo(b.getApellido());
-                    }
-                } else if (dir == Direccion.DESC) {
-                    switch (campo) {
-                        case "id" ->
-                                resultado = b.getId().compareTo(a.getId());
-                        case "nombre" ->
-                                resultado = b.getNombre().compareTo(a.getNombre());
-                        case "apellido" ->
-                                resultado = b.getApellido().compareTo(a.getApellido());
-                    }
+                    resultado = ordenar(campo, a, b);
+                } else {
+                    resultado = ordenar(campo, b, a);
                 }
                 return resultado;
-            }
         });
         return dataSourcce;
     }
@@ -83,5 +68,18 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
     public List<Cliente> listar(int desde, int hasta) {
         // Con subList podemos captura por ejemplo desde 1 hasta 10
         return dataSourcce.subList(desde, hasta);
+    }
+
+    // Creamos un método para complementar el ordenar y así evitarnos duplicar código en los If
+    public static int ordenar(String campo, Cliente a, Cliente b) {
+        int resultado = 0;
+        switch (campo) {
+            case "id" ->
+                    resultado = a.getId().compareTo(b.getId());
+            case "nombre" ->
+                    resultado = a.getNombre().compareTo(b.getNombre());
+            case "apellido" -> a.getApellido().compareTo(b.getApellido());
+        }
+        return resultado;
     }
 }

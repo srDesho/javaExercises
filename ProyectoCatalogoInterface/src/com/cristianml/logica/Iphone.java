@@ -1,6 +1,6 @@
 package com.cristianml.logica;
 
-public class Iphone extends Electronico implements IProducto{
+public class Iphone extends Electronico {
     private String color;
     private String modelo;
 
@@ -18,10 +18,7 @@ public class Iphone extends Electronico implements IProducto{
         return modelo;
     }
 
-    @Override
-    public int getPrecio() {
-        return this.precio;
-    }
+
 
     @Override
     public double getPrecioVenta() {

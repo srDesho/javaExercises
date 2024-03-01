@@ -1,6 +1,6 @@
 package com.cristianml.logica;
 
-public class TvLcd extends Electronico implements IProducto{
+public class TvLcd extends Electronico {
     private int pulgada;
 
     public TvLcd(int precio, String fabricante, int pulgada) {
@@ -10,11 +10,6 @@ public class TvLcd extends Electronico implements IProducto{
 
     public int getPulgada() {
         return pulgada;
-    }
-
-    @Override
-    public int getPrecio() {
-        return this.precio;
     }
 
     @Override

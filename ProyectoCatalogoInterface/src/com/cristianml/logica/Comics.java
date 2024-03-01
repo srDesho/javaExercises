@@ -2,7 +2,7 @@ package com.cristianml.logica;
 
 import java.util.Date;
 
-public class Comics extends Libro implements IProducto{
+public class Comics extends Libro{
     private String personaje;
 
     public Comics(int precio, Date fechaPublicacion, String autor, String titulo, String editorial, String perso) {

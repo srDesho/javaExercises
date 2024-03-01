@@ -3,6 +3,7 @@ package com.cristianml.repositorio;
 import com.cristianml.logica.Cliente;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class ClienteListRepositorio implements CrudRepositorio, OrdenableRepositorio, PaginableRepositorio{
@@ -47,12 +48,40 @@ public class ClienteListRepositorio implements CrudRepositorio, OrdenableReposit
     }
 
     @Override
+    // Listar ordenando segun al argumento recibido en la variable campo y si la direccion es asc o desc
     public List<Cliente> listar(String campo, Direccion dir) {
-        return null;
+        dataSourcce.sort(new Comparator<Cliente>() {
+            @Override
+            public int compare(Cliente a, Cliente b) {
+                int resultado = 0;
+                if (dir == Direccion.ASC) {
+                    switch (campo) {
+                        case "id" ->
+                            resultado = a.getId().compareTo(b.getId());
+                        case "nombre" ->
+                            resultado = a.getNombre().compareTo(b.getNombre());
+                        case "apellido" -> a.getApellido().compareTo(b.getApellido());
+                    }
+                } else if (dir == Direccion.DESC) {
+                    switch (campo) {
+                        case "id" ->
+                                resultado = b.getId().compareTo(a.getId());
+                        case "nombre" ->
+                                resultado = b.getNombre().compareTo(a.getNombre());
+                        case "apellido" ->
+                                resultado = b.getApellido().compareTo(a.getApellido());
+                    }
+                }
+                return resultado;
+            }
+        });
+        return dataSourcce;
     }
 
     @Override
+    // Listar de manera que se va a paginar depende al rango
     public List<Cliente> listar(int desde, int hasta) {
-        return null;
+        // Con subList podemos captura por ejemplo desde 1 hasta 10
+        return dataSourcce.subList(desde, hasta);
     }
 }

@@ -49,7 +49,8 @@ public class Cliente {
     }
 
     @Override
-    // Nos sirver para poder comparar los objetos mediante el atributo Id que seleccionamos
+    // Nos sirve para poder comparar los objetos mediante el atributo Id que seleccionamos
+    // al crear la sobreescritura mediante el ide(Intellij)
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

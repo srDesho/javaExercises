@@ -55,12 +55,12 @@ public class ClienteListRepositorio implements FullCrudRepositorio{
                 int resultado = 0;
                 if (dir == Direccion.ASC) {
                     resultado = ordenar(campo, a, b);
-                } else {
+                } else if (dir == Direccion.DESC){
                     resultado = ordenar(campo, b, a);
                 }
                 return resultado;
         });
-        return dataSourcce;
+        return listaOrdenada;
     }
 
     @Override
@@ -78,7 +78,8 @@ public class ClienteListRepositorio implements FullCrudRepositorio{
                     resultado = a.getId().compareTo(b.getId());
             case "nombre" ->
                     resultado = a.getNombre().compareTo(b.getNombre());
-            case "apellido" -> a.getApellido().compareTo(b.getApellido());
+            case "apellido" ->
+                    resultado = a.getApellido().compareTo(b.getApellido());
         }
         return resultado;
     }

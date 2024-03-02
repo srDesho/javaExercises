@@ -3,7 +3,6 @@ package com.cristianml.repositorio;
 import com.cristianml.logica.Cliente;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class ClienteListRepositorio implements FullCrudRepositorio{

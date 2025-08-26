@@ -6,7 +6,7 @@ public class RomanToInteger {
         int result = 0;
         int aux1 = 0;
         int aux2 = 0;
-        String s = "MCMLXXX";
+        String s = "MDCXCV";
 
         for (int i = 0; s.length() > i; i++) {
             //System.out.println(s.length());
@@ -22,6 +22,7 @@ public class RomanToInteger {
                 result = result + aux1;
             } else if (aux1 <= aux2){
                 result =  result + (aux2 - aux1);
+                aux2 = 0;
                 i++;
             }
         }

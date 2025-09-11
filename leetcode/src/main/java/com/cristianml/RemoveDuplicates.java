@@ -2,7 +2,7 @@ package com.cristianml;
 
 import java.util.Arrays;
 
-public class Main {
+public class RemoveDuplicates {
 
     public static void main(String[] args) {
         // Puedes probar con diferentes arrays aquí
@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Array inicial: " + Arrays.toString(nums));
 
         // Instanciamos la misma clase para llamar al método
-        Main programa = new Main();
+        RemoveDuplicates programa = new RemoveDuplicates();
         int k = programa.removeDuplicates(nums);
 
         System.out.println("\n--- RESULTADOS ---");
